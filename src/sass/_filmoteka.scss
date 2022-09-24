@@ -28,6 +28,7 @@ header {
         }
 
     @media screen and (min-width: 768px) {
+      height: 216px;
         background-image: url(../images/header_background_tab_x1-min.jpg);
         
     @media (min-device-pixel-ratio: 2),
@@ -55,13 +56,131 @@ header {
   padding: 40px 20px 92px 20px;
 }
 
+.navigation_logo-box {
+  display: flex;
+  align-items: center;
+}
+
+.header_logo {
+  @extend %link;
+  width: 24px;
+  height: 24px;
+  
+  @media screen and (min-width: 768px) {
+    margin-right: 10px;
+  }
+}
+
+.header_title {
+  margin: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.17;
+  color: #ffffff;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
 .navigation {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 52px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+  }
 }
 
 .navigation_list {
   display: flex;
+  margin: 0;
+  padding: 0;
 }
+
+.navigation_link {
+  @extend %link;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  &.current {
+    position: relative;
+  }
+
+  &.current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+    background-color: #FF001B;
+}
+}
+
+.navigation_item {
+  @extend %list;
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.input-content {
+  position: relative;
+  width: 280px;
+  display: block;
+  margin: 0 auto;
+  
+  @media screen and (min-width: 768px) {
+    width: 336px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 394px;
+  }
+}
+
+.search_input {
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+  border-left: 0.5px solid transparent;
+  border-top: 0.5px solid transparent;
+  border-right: 0.5px solid transparent;
+  border-bottom: 0.5px solid #FFFFFF;
+}
+
+.input_label {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  font-weight: 400;
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.67;
+  color: #ffffff;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  transform: translateY(-50%);
+}
+
+.container {
+  padding: 20px;
+}
+
 
 .modal {
     position: relative;

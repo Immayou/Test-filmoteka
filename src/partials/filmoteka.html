@@ -11,30 +11,39 @@
       <header>
         <div class="header_container">
         <nav class="navigation">
-          <a href="" class="header_logo link" href="./index.html">
+          <div class="navigation_logo-box">
+          <a href="" class="header_logo" href="./index.html">
             <svg class="logo_icon" width="24" height="24">
               <use href="./images/symbol-defs.svg#icon-film"></use>
             </svg>
           </a>
-          <ul class="navigation_list list">
-              <li class="navigation_item list"><a class="navigation_link current link" href="./index.html">Home</a></li>
-              <li class="navigation_item list"><a class="navigation_link link" href="">My library</a></li>
+          <h1 class="header_title">Filmoteka</h1>
+        </div>
+          <ul class="navigation_list">
+              <li class="navigation_item"><a class="navigation_link current" href="./index.html">Home</a></li>
+              <li class="navigation_item"><a class="navigation_link" href="">My library</a></li>
           </ul>
       </nav>
     <div class="input-field">
-        <label for="search_input" class="modal-label">Movie search</label>
-        <div class="modal-input-content">
+        <div class="input-content">
         <input type="text" name="search_input" id="search_input" class="search_input" minlength="2" placeholder=" ">
+        <label for="search_input" class="input_label">Movie search</label>
         <svg class="input-icon" width="12" height="12">
              <use href="./images/symbol-defs.svg#input-icon"></use>
         </svg>
         </div>
     </div>
-  </div>
-      
-        
-
+  </div>     
       </header>
+
+<section>
+  <div class="container">
+  <div class="films_box">
+    
+  </div>
+  </div>
+</section>
+
     <div class="modal visually_hidden">
         <svg class="modal_close_icon" width="14" height="14">
           <!-- <use href="./images/symbol-defs.svg#icon-arrow-up"></use> -->
