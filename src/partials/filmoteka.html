@@ -9,8 +9,30 @@
 <body>
     <main>
       <header>
+        <div class="header_container">
+        <nav class="navigation">
+          <a href="" class="header_logo link" href="./index.html">
+            <svg class="logo_icon" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-film"></use>
+            </svg>
+          </a>
+          <ul class="navigation_list list">
+              <li class="navigation_item list"><a class="navigation_link current link" href="./index.html">Home</a></li>
+              <li class="navigation_item list"><a class="navigation_link link" href="">My library</a></li>
+          </ul>
+      </nav>
+    <div class="input-field">
+        <label for="search_input" class="modal-label">Movie search</label>
+        <div class="modal-input-content">
+        <input type="text" name="search_input" id="search_input" class="search_input" minlength="2" placeholder=" ">
+        <svg class="input-icon" width="12" height="12">
+             <use href="./images/symbol-defs.svg#input-icon"></use>
+        </svg>
+        </div>
+    </div>
+  </div>
+      
         
-
 
       </header>
     <div class="modal visually_hidden">
@@ -24,10 +46,10 @@
           <caption>
             Title
           </caption>
-          <tr>
+          <t>
             <th>Vote / Votes</th>
             <td class="table_values_content"><p class="table_value_accent">7.3</p><span class="table_slash">/</span><p class="table_value_simple">5</p></td>
-          </tr>
+          </t
           <tr>
             <th>Popularity</th>
             <td class="table_values">Mare</td>

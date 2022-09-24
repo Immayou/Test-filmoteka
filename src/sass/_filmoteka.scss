@@ -51,6 +51,18 @@ header {
     }
 }
 
+.header_container {
+  padding: 40px 20px 92px 20px;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation_list {
+  display: flex;
+}
+
 .modal {
     position: relative;
     padding: 48px 20px 40px 20px;
