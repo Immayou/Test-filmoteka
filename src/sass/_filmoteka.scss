@@ -13,7 +13,6 @@
 
 header {
     width: 100%;
-    height: 230px;
     opacity: 0.9;
     background-size: cover;
     background-repeat: no-repeat;
@@ -54,6 +53,14 @@ header {
 
 .header_container {
   padding: 40px 20px 92px 20px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 80px;
+  }
+}
+
+.header_box {
+  padding: 40px 20px 60px 20px;
 }
 
 .navigation_logo-box {
@@ -150,18 +157,23 @@ header {
 
 .search_input {
   width: 100%;
-  padding: 0;
+  padding: 0 0 0 5px;
   background-color: transparent;
   border-left: 0.5px solid transparent;
   border-top: 0.5px solid transparent;
   border-right: 0.5px solid transparent;
   border-bottom: 0.5px solid #FFFFFF;
+
+  &:focus + .input_label,
+  &:not(:placeholder-shown) + .input_label {
+    display: none;
+  }
 }
 
 .input_label {
   position: absolute;
   top: 50%;
-  left: 2px;
+  left: 5px;
   transform: translateY(-50%);
   font-weight: 400;
   font-family: 'Roboto';
@@ -170,15 +182,66 @@ header {
   color: #ffffff;
 }
 
-.input-icon {
+.submit-btn {
   position: absolute;
   top: 50%;
   right: 2px;
+  width: 12px;
+  height: 12px;
   transform: translateY(-50%);
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.input-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .container {
   padding: 20px;
+}
+
+.header_btn_list {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+}
+
+.header_btn_item:not(:last-child) {
+  margin-right: 20px;
+  
+  @media screen and (min-width: 768px) {
+    margin-right: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-right: 16px;
+}
+}
+
+.header_btn {
+  width: 130px;
+  height: 44px;
+  padding: 0;
+  background-color: transparent;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+
+  @media screen and (min-width: 768px) {
+    width: 152px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 148px;
+}
 }
 
 
