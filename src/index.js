@@ -21,36 +21,22 @@ try {
 }
 
 function createMarkup (films) {
-    // const vote = vote_average
-    // const two = Number(vote).toFixed(1)
+    const vote = vote_average
+    const two = Number(vote).toFixed(1)
 
-    const template = films.map(({poster_path, popularity, vote_average, vote_count, original_title, genres}) => {
-        console.log(popularity)})
+    const template = films.map(({poster_path, original_title, release_date, genres}) => {
+      return `<div class="film-card">
+           <img src="${poster_path}" alt="${overview}" loading="lazy" />
+           <div class="info">
+           <h1>${original_title}</h1>
+           <p class="info-genres">${original_title}</p>
+           <span class="info-slash">|</span>
+           <p class="info-year"></p>
+           </div>`})
+      
 
-    // const template = films.map(
-    //     ({poster_path, popularity, vote_average, vote_count, original_title, genres}) => 
-    //     {return `<div class="film-card">
-    //     <img src="${poster_path}" alt="${overview}" loading="lazy" />
-    //     <div class="info">
-    //       <p class="info-item">
-    //         <b>Likes:</b>
-    //         <span class="info-item-value">${popularity}</span>
-    //       </p>
-    //       <p class="info-item">
-    //         <b>Views:</b>
-    //         <span class="info-item-value">${vote}</span>
-    //       </p>
-    //       <p class="info-item">
-    //         <b>Comments:</b>
-    //         <span class="info-item-value">${vote}</span>
-    //       </p>
-    //       <p class="info-item">
-    //         <b>Downloads:</b>
-    //         <span class="info-item-value">${original_title}</span>
-    //       </p>
-    //     </div>
-    //   </div>`}).join('')
-    //   films_box.insertAdjacentHTML('beforeend', template)
+    
+      films_box.insertAdjacentHTML('beforeend', template)
 
   }
 
