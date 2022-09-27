@@ -281,6 +281,10 @@ header {
     padding: 48px 20px;
     width: 280px;
     background-color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) skew(180deg);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
     @media screen and (min-width: 768px) {
       width: 704px;
